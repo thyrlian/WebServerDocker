@@ -3,6 +3,12 @@ Uninteresting web server (to serve files) Docker image for personal purposes
 
 ## How To
 
+Build the image:
+
+```console
+docker build -t webserver .
+```
+
 Spin up a container:
 
 ```console
