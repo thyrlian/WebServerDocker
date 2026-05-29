@@ -51,3 +51,11 @@ The server is configured by [`Caddyfile`](Caddyfile).
 This setup is intended for **LAN**, **private mesh/VPN access** (such as Tailscale), or **reverse-proxy-backed** usage.
 
 For public exposure, put it behind a proper gateway such as **Traefik**, or let **Caddy** itself handle HTTPS and authentication in a dedicated public setup.
+
+## License
+
+Copyright © 2018-2026 [Jing Li](https://github.com/thyrlian)
+
+Released under the [MIT License](https://opensource.org/license/mit).
+
+See the [LICENSE](LICENSE) file for full details.
