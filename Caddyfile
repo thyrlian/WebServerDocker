@@ -1,4 +1,11 @@
+{
+	admin off
+	servers {
+		protocols h1
+	}
+}
+
 :8080 {
-    root * /srv
-    file_server browse
+	root * /srv
+	file_server browse
 }
