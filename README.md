@@ -6,12 +6,19 @@ This project uses the official Alpine-based [**Caddy**](https://hub.docker.com/_
 
 ## How To
 
-Update the volume mapping in [`compose.yaml`](compose.yaml) to point to the directory you want to share:
+Copy the [example environment file](.env.example):
 
-```yaml
-volumes:
-  - /path/to/share:/srv:ro
+```console
+cp .env.example .env
 ```
+
+Update `SHARE_DIR` in `.env`:
+
+```env
+SHARE_DIR=/path/to/share
+```
+
+Optionally update `HOST_PORT` to change the exposed local port.
 
 Start the web server:
 
@@ -25,7 +32,7 @@ Check the logs:
 docker compose logs -f webserver
 ```
 
-Open the web server: [http://localhost:8080](http://localhost:8080)
+Open the web server: [http://localhost:8080](http://localhost:8080) or the port configured by `HOST_PORT`.
 
 If the shared directory contains an `index.html`, it will be served as the homepage. Otherwise, Caddy will show a browsable directory listing.
 
